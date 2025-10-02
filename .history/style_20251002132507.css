@@ -153,7 +153,7 @@ body {
 
 .btn-secondary:hover {
     background: white;
-    color: #1F4C0E;
+    color: #1f4c0e;
 }
 
 /* Seções */
@@ -219,7 +219,7 @@ body {
 }
 
 .activity-card h3 {
-    color: #1F4C0E;
+    color: #1f4c0e;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -237,7 +237,7 @@ body {
 }
 
 .contact-info h3 {
-    color: #1F4C0E;
+    color: #1f4c0e;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -269,7 +269,7 @@ body {
 }
 
 .contact-form h3 {
-    color: #1F4C0E;
+    color: #1f4c0e;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -293,7 +293,7 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #1F4C0E;
+    border-color: #1f4c0e;
 }
 
 .contact-form textarea {
