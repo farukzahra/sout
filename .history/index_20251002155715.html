@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=TT+Chocolates:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -90,12 +91,10 @@
                     </div>
                     <div class="contact-form">
                         <h3>Envie uma Mensagem</h3>
-                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
-                            <input type="hidden" name="access_key" value="0da25042-554e-48ff-9284-4948607d4c86">
-                            <input type="hidden" name="subject" value="Nova mensagem do site Sout Vozes em Movimento">
-                            <input type="text" name="name" placeholder="Seu nome" required>
-                            <input type="email" name="email" placeholder="Seu email" required>
-                            <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+                        <form>
+                            <input type="text" placeholder="Seu nome" required>
+                            <input type="email" placeholder="Seu email" required>
+                            <textarea placeholder="Sua mensagem" rows="5" required></textarea>
                             <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                         </form>
                     </div>
@@ -126,16 +125,11 @@
             });
         });
 
-        // Formulário de contato com Web3Forms
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            // Mostrar loading
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Enviando...';
-            submitBtn.disabled = true;
-
-            // O Web3Forms vai processar automaticamente
-            // Não precisamos de preventDefault() pois queremos que o form seja enviado
+        // Formulário de contato (funcionalidade básica)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado pela sua mensagem! Entraremos em contato em breve.');
+            this.reset();
         });
     </script>
 </body>

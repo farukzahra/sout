@@ -112,6 +112,11 @@
     </footer>
 
     <script>
+        // Inicializar EmailJS
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pela sua Public Key
+        })();
+
         // Smooth scrolling para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -126,16 +131,29 @@
             });
         });
 
-        // Formulário de contato com Web3Forms
+        // Formulário de contato com EmailJS
         document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             // Mostrar loading
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
 
-            // O Web3Forms vai processar automaticamente
-            // Não precisamos de preventDefault() pois queremos que o form seja enviado
+            // Enviar email
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    alert('Erro ao enviar mensagem. Tente novamente ou entre em contato pelo Instagram.');
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     </script>
 </body>
