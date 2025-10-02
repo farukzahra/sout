@@ -1,0 +1,71 @@
+# Configuração do site Sout Vozes em Movimento
+title: Sout Vozes em Movimento
+description: Movimento social e cultural dedicado a amplificar vozes e promover transformação social através da arte, cultura e ativismo.
+author: Sout Vozes em Movimento
+email: contato@soutvozes.com
+
+# Configurações do Jekyll
+baseurl: "" # Deixe vazio se o site estiver na raiz do domínio
+url: "" # Seu domínio personalizado ou username.github.io
+
+# Configurações de build
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Configurações de plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Configurações de coleções
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Configurações de páginas
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Configurações de navegação
+navigation:
+  - title: Sobre
+    url: /#sobre
+  - title: Atividades
+    url: /#atividades
+  - title: Contato
+    url: /#contato
+
+# Configurações sociais
+social:
+  instagram: sout_vozesemmovimento
+
+# Configurações de SEO
+seo:
+  type: Organization
+  name: Sout Vozes em Movimento
+  description: Movimento social e cultural dedicado a amplificar vozes e promover transformação social
+  url: ""
+  logo: ""
+  sameAs:
+    - https://www.instagram.com/sout_vozesemmovimento/
+
+# Configurações de build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
