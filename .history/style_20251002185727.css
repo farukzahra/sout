@@ -309,11 +309,6 @@ body {
     line-height: 1.6;
 }
 
-.activities-cta {
-    text-align: center;
-    margin: 2rem 0 3rem 0;
-}
-
 /* Contato */
 .contact-content {
     display: grid;
@@ -421,7 +416,6 @@ body {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
-        gap: 0.8rem;
     }
     
     .about-content,
