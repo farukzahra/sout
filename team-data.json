@@ -1,0 +1,40 @@
+{
+  "team": [
+    {
+      "name": "Dr. Ahmed Hassan",
+      "role": "Psicólogo Clínico",
+      "description": "Especialista em atendimento de refugiados com foco em trauma e resiliência. Fluente em árabe e inglês.",
+      "emoji": "👨‍⚕️"
+    },
+    {
+      "name": "Dra. Maria Santos",
+      "role": "Psicóloga Social",
+      "description": "Atua com apoio psicossocial e integração cultural de pessoas refugiadas. Especialista em terapia familiar.",
+      "emoji": "👩‍⚕️"
+    },
+    {
+      "name": "Dr. Omar Al-Rashid",
+      "role": "Terapeuta Cultural",
+      "description": "Especialista em terapia culturalmente sensível para comunidades árabes. Trabalha com questões de identidade cultural.",
+      "emoji": "🧑‍💼"
+    },
+    {
+      "name": "Dra. Fatima Al-Zahra",
+      "role": "Psicóloga de Trauma",
+      "description": "Especializada em tratamento de trauma em refugiados. Experiência em TEPT e resiliência pós-traumática.",
+      "emoji": "👩‍🎓"
+    },
+    {
+      "name": "Dr. Carlos Mendes",
+      "role": "Psicólogo Clínico",
+      "description": "Atua com crianças e adolescentes refugiados. Especialista em desenvolvimento infantil e adaptação cultural.",
+      "emoji": "👨‍🏫"
+    },
+    {
+      "name": "Dra. Layla Ibrahim",
+      "role": "Terapeuta de Casais",
+      "description": "Especialista em terapia de casais e famílias refugiadas. Trabalha com questões de relacionamento e adaptação.",
+      "emoji": "👩‍💻"
+    }
+  ]
+}

@@ -82,37 +82,8 @@
         <section id="equipe" class="section">
             <div class="container">
                 <h2>Nossa Equipe</h2>
-                <div class="team-grid">
-                    <div class="team-card">
-                        <div class="team-photo">
-                            <div class="placeholder-photo">
-                                <span>👤</span>
-                            </div>
-                        </div>
-                        <h3>Nome do Profissional</h3>
-                        <p class="team-role">Psicóloga Clínica</p>
-                        <p class="team-description">Especialista em atendimento de refugiados com foco em trauma e resiliência.</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-photo">
-                            <div class="placeholder-photo">
-                                <span>👤</span>
-                            </div>
-                        </div>
-                        <h3>Nome do Profissional</h3>
-                        <p class="team-role">Psicólogo Social</p>
-                        <p class="team-description">Atua com apoio psicossocial e integração cultural de pessoas refugiadas.</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-photo">
-                            <div class="placeholder-photo">
-                                <span>👤</span>
-                            </div>
-                        </div>
-                        <h3>Nome do Profissional</h3>
-                        <p class="team-role">Terapeuta</p>
-                        <p class="team-description">Especialista em terapia culturalmente sensível para comunidades árabes.</p>
-                    </div>
+                <div id="team-grid" class="team-grid">
+                    <!-- Cards serão gerados dinamicamente pelo JavaScript -->
                 </div>
             </div>
         </section>
@@ -167,6 +138,73 @@
                 }
             });
         });
+
+        // Engine para gerar dinamicamente a equipe
+        const teamData = [
+            {
+                name: "Dr. Ahmed Hassan",
+                role: "Psicólogo Clínico",
+                description: "Especialista em atendimento de refugiados com foco em trauma e resiliência. Fluente em árabe e inglês.",
+                image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
+            },
+            {
+                name: "Dra. Maria Santos",
+                role: "Psicóloga Social",
+                description: "Atua com apoio psicossocial e integração cultural de pessoas refugiadas. Especialista em terapia familiar.",
+                image: "https://images.unsplash.com/photo-1594824373631-4b0b2a4b3b3b?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
+            },
+            {
+                name: "Dr. Omar Al-Rashid",
+                role: "Terapeuta Cultural",
+                description: "Especialista em terapia culturalmente sensível para comunidades árabes. Trabalha com questões de identidade cultural.",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
+            },
+            {
+                name: "Dra. Fatima Al-Zahra",
+                role: "Psicóloga de Trauma",
+                description: "Especializada em tratamento de trauma em refugiados. Experiência em TEPT e resiliência pós-traumática.",
+                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
+            },
+            {
+                name: "Dr. Carlos Mendes",
+                role: "Psicólogo Clínico",
+                description: "Atua com crianças e adolescentes refugiados. Especialista em desenvolvimento infantil e adaptação cultural.",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
+            },
+            {
+                name: "Dra. Layla Ibrahim",
+                role: "Terapeuta de Casais",
+                description: "Especialista em terapia de casais e famílias refugiadas. Trabalha com questões de relacionamento e adaptação.",
+                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
+            }
+        ];
+
+        function generateTeamCards() {
+            const teamGrid = document.getElementById('team-grid');
+            teamGrid.innerHTML = ''; // Limpar grid antes de adicionar novos cards
+            
+            teamData.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'team-card';
+                
+                card.innerHTML = `
+                    <div class="team-photo">
+                        <img src="${member.image}" alt="${member.name}" class="team-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-photo" style="display: none;">
+                            <span>👤</span>
+                        </div>
+                    </div>
+                    <h3>${member.name}</h3>
+                    <p class="team-role">${member.role}</p>
+                    <p class="team-description">${member.description}</p>
+                `;
+                
+                teamGrid.appendChild(card);
+            });
+        }
+
+        // Gerar cards quando a página carregar
+        document.addEventListener('DOMContentLoaded', generateTeamCards);
 
         // Formulário de contato com Web3Forms
         document.getElementById('contact-form').addEventListener('submit', function(e) {
