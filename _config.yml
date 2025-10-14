@@ -6,7 +6,7 @@ email: contato@soutvozes.com
 
 # Configurações do Jekyll
 baseurl: "" # Deixe vazio se o site estiver na raiz do domínio
-url: "" # Seu domínio personalizado ou username.github.io
+url: "https://farukzahra.github.io" # URL padrão do GitHub Pages
 
 # Configurações de build
 markdown: kramdown
@@ -55,7 +55,7 @@ seo:
   type: Organization
   name: Sout Vozes em Movimento
   description: Movimento social e cultural dedicado a amplificar vozes e promover transformação social
-  url: ""
+  url: "https://farukzahra.github.io"
   logo: ""
   sameAs:
     - https://www.instagram.com/sout_vozesemmovimento/
