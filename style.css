@@ -264,9 +264,12 @@ body {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team-member {
@@ -329,6 +332,46 @@ body {
 .activities-cta {
     text-align: center;
     margin: 2rem 0 3rem 0;
+}
+
+/* Mídia */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.media-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.media-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.media-item h3 {
+    color: #1F4C0E;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.media-item p {
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.media-item .btn {
+    align-self: flex-start;
 }
 
 /* Contato */
